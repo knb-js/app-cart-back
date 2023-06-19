@@ -9,11 +9,11 @@ import java.util.List;
 public interface UserMapper {
 
     @Select("select  " +
-            "    Rut as rut, " +
-            "    Dv as dv, " +
-            "    Nombre as nombre, " +
-            "    Apellido as apellido, " +
-            "    Email as email, " +
+            "    Rut as rut , " +
+            "    Dv as dv , " +
+            "    Nombre as nombre , " +
+            "    Apellido as apellido , " +
+            "    Email as email " +
             "    from users")
     List<UserEntity> findAllUser();
 
@@ -22,7 +22,7 @@ public interface UserMapper {
             "    Dv as dv, " +
             "    Nombre as nombre, " +
             "    Apellido as apellido, " +
-            "    Email as email, " +
+            "    Email as email " +
             "    from users where rut = #{rut}")
     UserEntity findByUser(Integer rut);
 
